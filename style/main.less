@@ -1,3 +1,28 @@
 * {
     box-sizing: border-box;
 }
+
+.time-range {
+    .time-picker {
+        display: inline-block;
+    }
+
+    .time-picker + .time-picker::before {
+        content: '—'
+    }
+}
+
+.time-picker {
+    > input[type=number] {
+        width: 3rem;
+    }
+
+    .time-picker-hours {
+    }
+
+    .time-picker-minutes {
+        &::before {
+            content: ':';
+        }
+    }
+}
